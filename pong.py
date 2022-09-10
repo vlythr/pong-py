@@ -71,7 +71,7 @@ while True:
     
     # Ball movement
     ball.setx(ball.xcor() + ball.dx)
-    ball.sety(ball.xcor() + ball.dy)    
+    ball.sety(ball.ycor() + ball.dy)    
 
     # Border checking
     if ball.ycor() > 290:
