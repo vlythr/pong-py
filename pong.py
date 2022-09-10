@@ -7,6 +7,10 @@ wd.bgcolor("purple")
 wd.setup(width=800, height=600)
 wd.tracer(0)
 
+# Score
+score_a = 0
+score_b = 0
+
 # Right Paddle
 right_p = turtle.Turtle()
 right_p.speed(0)
@@ -94,10 +98,18 @@ while True:
     if ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx *= -1
+        score_a += 1
+        sb.clear()
+        sb.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "bold"))
+
 
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx *= -1
+        score_b += 1
+        sb.clear()
+        sb.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "bold"))
+        
 
     # Paddle and ball collisions
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < left_p.ycor() + 40 and ball.ycor() > left_p.ycor() -40):
