@@ -35,15 +35,33 @@ ball.goto(0, 0)
 
 # Function 
 def right_p_up():
-    y = right_p.ycord()
+    y = right_p.ycor()
     y += 20
     right_p.sety(y)
+
+def right_p_down():
+    y = right_p.ycor()
+    y -= 20
+    right_p.sety(y)
+
+def left_p_up():
+    y = right_p.ycor()
+    y += 20
+    left_p.sety(y)
+
+def left_p_down():
+    y = right_p.ycor()
+    y -= 20
+    left_p.sety(y)
 
 # Keyboard binding
 wd.listen()
 wd.onkeypress(right_p_up, "w")
+wd.onkeypress(right_p_down, "s")
 
-
+wd.listen()
+wd.onkeypress(left_p_up, "Up")
+wd.onkeypress(left_p_down, "Down")
 
 # Main game loop
 while True:
