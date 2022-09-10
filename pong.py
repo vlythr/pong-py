@@ -32,6 +32,8 @@ ball.shape("square")
 ball.color("green")
 ball.penup()
 ball.goto(0, 0)
+ball.dx = 1
+ball.dy = 1
 
 # Function 
 def right_p_up():
@@ -67,6 +69,8 @@ wd.onkeypress(left_p_down, "Down")
 while True:
     wd.update()
     
-
+    # Ball movement
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.xcor() + ball.dy)    
 
 
