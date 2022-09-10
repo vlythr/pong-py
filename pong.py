@@ -101,7 +101,7 @@ while True:
         score_a += 1
         sb.clear()
         sb.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "bold"))
-        os.system("aplay error.wav")
+        os.system("aplay error.wav&")
 
     if ball.xcor() < -390:
         ball.goto(0, 0)
@@ -109,15 +109,15 @@ while True:
         score_b += 1
         sb.clear()
         sb.write("Player A: {} Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "bold"))
-        os.system("aplay error.wav")
+        os.system("aplay error.wav&")
 
     # Paddle and ball collisions
     if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < left_p.ycor() + 40 and ball.ycor() > left_p.ycor() -40):
         ball.setx(340)
         ball.dx *= -1
-        os.system("aplay bounce.wav")
+        os.system("aplay bounce.wav&")
 
     if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < right_p.ycor() + 40 and ball.ycor() > right_p.ycor() -40):
         ball.setx(-340)
         ball.dx *= -1
-        os.system("aplay bounce.wav")
+        os.system("aplay bounce.wav&")
