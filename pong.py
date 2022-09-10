@@ -33,6 +33,17 @@ ball.color("green")
 ball.penup()
 ball.goto(0, 0)
 
+# Function 
+def right_p_up():
+    y = right_p.ycord()
+    y += 20
+    right_p.sety(y)
+
+# Keyboard binding
+wd.listen()
+wd.onkeypress(right_p_up, "w")
+
+
 
 # Main game loop
 while True:
