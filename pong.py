@@ -45,12 +45,12 @@ def right_p_down():
     right_p.sety(y)
 
 def left_p_up():
-    y = right_p.ycor()
+    y = left_p.ycor()
     y += 20
     left_p.sety(y)
 
 def left_p_down():
-    y = right_p.ycor()
+    y = left_p.ycor()
     y -= 20
     left_p.sety(y)
 
