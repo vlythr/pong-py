@@ -35,6 +35,15 @@ ball.goto(0, 0)
 ball.dx = 1
 ball.dy = 1
 
+# Score Board
+sb = turtle.Turtle()
+sb.speed(0)
+sb.color("green") 
+sb.penup()
+sb.hideturtle()
+sb.goto(0, 260)
+sb.write("Player A: 0 Player B: 0", align="center", font=("Courier", 24, "bold"))
+
 # Function 
 def right_p_up():
     y = right_p.ycor()
